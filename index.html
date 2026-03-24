@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Services</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+</head>
+<body>
+   
+    <section class="nav-bar">
+        <div class="logo">
+            <h1>Laundry Services</h1>
+        </div>
+        <div class="nav-link">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="welcome-note">
+            <p>Welcome !</p>
+        </div>
+    </section>
+    
+
+    <section class="hero-section">
+        <div class="hero-left">
+            <h2>Experience the Ultimate Laundry Service</h2>
+            <p>
+         We provide top-notch laundry services with a touch
+         of care and convenience. Let us take care of
+         your laundry needs while you enjoy your
+         free time.
+            </p>
+            <button class="btn btn-primary" onclick="scrollToSection('services')">Book a Services Today!</button>
+        </div>
+        <div class="hero-right">
+            <img src="https://images.pexels.com/photos/2927523/pexels-photo-2927523.jpeg" alt="IMAGE HERE">
+        </div>
+    </section>
+
+    <section class="our-achievements">
+        <h1>Our Achievements</h1>
+        <div class="achievement-cards">
+            <div class="card">
+                <h3>1000+</h3>
+                <p>Happy Customers</p>
+            </div>
+            <div class="card">
+                <h3>5000+</h3>
+                <p>Clothes Washed</p>
+            </div>
+            <div class="card">
+                <h3>10+</h3>
+                <p>Years of Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section" id="services">
+        <div class="our-services">
+            <div class="head-line">
+                <h2>Our Services</h2>
+                <p>Click on the Add To Cart button to Add the services to your cart.</p>
+            </div>
+            <hr>
+            <div class="services-list">
+                <div class="service">
+                    <span>Dry Cleaning &#8226; 200</span> <button class="btn dryClean" onclick="addToCart('Dry Cleaning', 200)">Add to Cart</button>
+                </div>
+                <div class="service">
+                    <span>Wash & Fold &#8226; 100</span> <button class="btn wash" onclick="addToCart('Wash & Fold', 100)">Add to Cart</button>
+                </div>
+                <div class="service">
+                    <span>Ironing &#8226; 30</span> <button class="btn iron" onclick="addToCart('Ironing', 30)">Add to Cart</button>
+                </div>
+                <div class="service">
+                    <span>Stain Removal &#8226; 500</span> <button class="btn stain" onclick="addToCart('Stain Removal', 500)">Add to Cart</button>
+                </div>
+                <div class="service">
+                    <span>Leather and Suede Cleaning &#8226; 999</span> <button class="btn leather" onclick="addToCart('Leather and Suede Cleaning', 999)">Add to Cart</button>
+                </div>
+                <div class="service">
+                    <span>Wedding Dress Cleaning &#8226; 2800</span> <button class="btn wedding" onclick="addToCart('Wedding Dress Cleaning', 2800)">Add to Cart</button>
+                </div>
+            </div>
+            <hr>
+            <div class="footnote">
+                <p>Add the items to the Cart and Book Now.</p>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="items">
+                <div class="cart-heading"><h3>Added Items</h3></div>
+                <div class="column-heading">
+                    <p>S.NO.</p>
+                    <p>Service Name</p>
+                    <p>Price</p>
+                </div>
+                <div class="cart-items">
+                    <p>No items in cart</p>
+                </div>
+                <hr>
+                <div class="price-area">
+                    <p>Total Amount</p>
+                    <p id="cart-total">0</p>
+                </div>
+            </div>
+            <div class="booking">
+                <h3>Book Now</h3>
+                <p>Your Name:</p>
+                <input type="text" id="username" class="input name-box">
+                <div class="sub-booking">
+                    <div>
+                        <p>Email ID</p>
+                        <input type="text" id="useremail" class="input mail-box">
+                    </div>
+                    <div>
+                        <p>Phone Number</p>
+                        <input type="text" id="userphone" class="input number-box">
+                    </div>
+                </div>
+                <br>
+                <button id="book_now" class="btn btn-primary">Book Now</button>
+                <hr>
+                <p>Add the Items to the Cart to Book.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-sec-1">
+            <div class="foot-card">
+                <div>
+                <img class="img0" src="./images/Laundry icon transpa.png" alt="">
+                </div>
+                <h3>Premium Services</h3>
+                Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel as good as new.
+            </div>
+            <div class="foot-card">
+                <div>
+                <img class="img1" src="./images/Headset support icon.png" alt="">
+                </div>
+                <h3>Quick Support</h3>
+                We're committed to providing prompt solutions to ensure your experience is smooth and worry-free.
+            </div>
+            <div class="foot-card">
+                <div>
+                <img class="img2" src="./images/parcel handling icon.png" alt="">
+                </div>
+                <h3>Hassle Free Delivery</h3>
+                Enjoy seamless service with our convenient pickup and delivery options, tailored to your schedule.
+            </div>
+            <div class="foot-card">
+                <div>
+                <img class="img3" src="./images/Handshake with coins.png" alt="">
+                </div>
+                <h3>Affordable Prices</h3>
+                Experience exceptional care without breaking the bank - our affordable prices make laundry day stress-free.
+            </div>
+        </div>
+        <div class="footer-sec-2">
+            <div class="hello">Subscribe to Our Newsletter</div>
+            <div class="value">
+                <input id="subscriber-name" class="write" type="text" placeholder="Full Name">
+                <input id="subscriber-email" class="write" type="text" placeholder="Email">
+                <button id="subscribe" class="zama">Subscribe</button>
+            </div>
+            
+        </div>
+        <div class="footer-sec-3" id="about">
+            <div>
+                <h2>Laundry Services</h2>
+                <p><b>About Us</b> <br>we believe your clothes deserve the best care. We are a premier laundry and dry-cleaning service dedicated to delivering impeccably clean, crisp garments right to your doorstep.</p>
+            </div>
+            <div>
+                <h2>Important Links</h2>
+                <a href="#about">About us</a>
+                <a href="#contact">Contact us</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms of use</a>
+                <a href="">Refund Policy</a>
+            </div>
+            <div id="contact">
+                <h2>Contact</h2>
+                <p>mail@site.com</p>
+                <p>+91 91234 56780</p>
+            </div>
+            <div>
+                <h2>Follow Us</h2>
+            </div>
+        </div>
+
+
+    
+    
+
+ 
+    </section>
+    <script src="script.js"></script>
+   
+
+  
+
+</body>
+</html>
